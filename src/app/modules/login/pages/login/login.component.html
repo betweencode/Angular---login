@@ -1,0 +1,24 @@
+<form [formGroup]="myForm" (ngSubmit)="submitFormulario()">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Usuario</label>
+        <input formControlName="usuario" [class.is-invalid]="f.usuario.errors && f.usuario.touched"  type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu usuario">
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            Usuario obligatorio
+          </div>
+      </div>
+    
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Contraseña</label>
+        <input formControlName="password" [class.is-invalid]="f.password.errors && f.password.touched" type="password" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu contraseña">
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            contraseña obligatoria
+          </div>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-success">Ingresar</button>
+      </div>
+</form>
+  
+
+
+<a href="#" routerLink="/sinsesion/registro" onclick="return false">¿No tienes cuenta?</a>
