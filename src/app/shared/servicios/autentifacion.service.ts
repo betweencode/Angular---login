@@ -18,4 +18,13 @@ export class AutentifacionService {
   public habilitarlogeo(){
     return this.ingresar;
   }
+
+
+  public getAutenticationByToken(){
+    return sessionStorage.getItem("token");
+  }
+
+  public limpiarToken(){
+    return sessionStorage.setItem("token",'');
+  }
 }
